@@ -1,7 +1,8 @@
-*{
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     box-sizing: border-box;
 }
+
 header {
     display: grid;
     grid-template-columns: 24px auto 44px;
@@ -10,24 +11,68 @@ header {
     column-gap: 30px;
     align-items: end;
 }
-header img{
+
+header img {
     display: block;
 }
-header span{
-    font-size:x-large;
+
+header span {
+    font-size: x-large;
     color: #534848;
 }
-.hambuger{
+
+/*****************  HAMBUGER  ***************************/
+.hambuger {
     background: none;
     border: none;
     color: #534848;
     cursor: pointer;
 }
-.hambuger::before{
+
+.hambuger::before {
     content: "\2630";
     font-size: x-large;
 }
-.hambuger.show::before{
+
+.hambuger.show::before {
     content: "\00d7";
     font-size: x-large;
+}
+
+/*******************  NAVIGATION  **********************/
+.navigation {
+    display: none;
+}
+
+.navigation.show {
+    display: block;
+}
+
+.navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation a {
+    display: block;
+    text-decoration: none;
+    padding: .8rem 10px;
+    color: #3a3434;
+    border-bottom: solid 1px #ddd;
+}
+
+.navigation li.current {
+    background-color: #c4c4c4;
+}
+
+.navigation a:hover {
+    background-color: #ffa600;
+}
+
+
+
+
+h1 {
+    margin-left: 10px;
 }
