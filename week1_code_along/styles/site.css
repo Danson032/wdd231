@@ -1,4 +1,33 @@
+*{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+}
 header {
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: 24px auto 44px;
+    padding: 5px 0px 5px 10px;
+    border-bottom: solid rgb(167, 166, 166) 1px;
+    column-gap: 30px;
+    align-items: end;
+}
+header img{
+    display: block;
+}
+header span{
+    font-size:x-large;
+    color: #534848;
+}
+.hambuger{
+    background: none;
+    border: none;
+    color: #534848;
+    cursor: pointer;
+}
+.hambuger::before{
+    content: "\2630";
+    font-size: x-large;
+}
+.hambuger.show::before{
+    content: "\00d7";
+    font-size: x-large;
 }
