@@ -1,10 +1,35 @@
-@media only screen and (min-width:600px){
-
-.hambuger{
-    display: none;
-}
+@media only screen and (min-width:600px) {
 
 
+
+
+    header,
+    main,
+    nav,
+    footer {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .hambuger {
+        display: none;
+    }
+
+    .navigation {
+        display: block;
+
+    }
+
+    .navigation ul {
+        display: flex;
+        border-bottom: solid 1px #ddd;
+        border-left: solid 1px #ddd;
+    }
+
+    .navigation a {
+        border: none;
+        border-right: solid 1px #ddd;
+    }
 
 
 

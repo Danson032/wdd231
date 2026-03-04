@@ -1,7 +1,8 @@
-*{
+* {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-header{
+
+header {
     display: grid;
     grid-template-columns: 22px auto 44px;
     padding: 5px 0px 5px 10px;
@@ -9,21 +10,25 @@ header{
     align-items: end;
     border-bottom: solid 1px #aca3a3;
 }
-header img{
+
+header img {
     height: 42px;
-    width:42px
+    width: 42px
 }
-header span{
+
+header span {
     font-size: x-large;
     color: #332f2f;
-    
+
 }
+
 /**************** HAMBUGER *****************/
-.hambuger{
+.hambuger {
     border: none;
-    background:none;
+    background: none;
     cursor: pointer;
 }
+
 .hambuger:hover {
     background-color: #aca3a3;
     border-radius: 4px;
@@ -33,7 +38,31 @@ header span{
     content: "\2630";
     font-size: x-large;
 }
+
 .hambuger.show::before {
     content: "\00d7";
     font-size: x-large;
+}
+
+/**************** NAVIGATION *****************/
+.navigation {
+    display: none;
+}
+
+.navigation.show {
+    display: block;
+}
+
+.navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation a {
+    display: block;
+    text-decoration: none;
+    padding: .8rem 10px;
+    color: #3a3434;
+    border-bottom: solid 1px #ddd;
 }
