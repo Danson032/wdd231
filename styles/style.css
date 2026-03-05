@@ -41,7 +41,8 @@ header span {
 
 .hambuger.show::before {
     content: "\00d7";
-    font-size: x-large;
+    font-family: Verdana;
+    font-size: xx-large;
 }
 
 /**************** NAVIGATION *****************/

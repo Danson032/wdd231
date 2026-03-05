@@ -5,6 +5,7 @@ const nav = document.getElementById("nav");
 if (hamBtn && nav) {
     hamBtn.addEventListener("click", () => {
         nav.classList.toggle("show");
+        hamBtn.classList.toggle("show");
     });
 }
 
