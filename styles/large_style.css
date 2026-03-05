@@ -3,12 +3,16 @@
 
 
 
-    header,
-    main,
-    nav,
-    footer {
+    body {
         max-width: 900px;
         margin: 0 auto;
+    }
+
+    header,
+    main,
+    footer,
+    nav {
+        padding: .7rem 10px;
     }
 
     .hambuger {
@@ -31,7 +35,9 @@
         border-right: solid 1px #ddd;
     }
 
-
+    .about-me {
+        display: flex;
+    }
 
 
 

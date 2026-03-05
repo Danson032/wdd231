@@ -1,5 +1,6 @@
 * {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #ffffff;
 }
 
 header {
@@ -68,9 +69,47 @@ header span {
 }
 
 .navigation li.current {
-    background-color: #c4c4c4;
+    background-color: #b6b2b2;
 }
 
 .navigation a:hover {
     background-color: #ffa600;
+}
+
+/**************** BODY *****************/
+body {
+    display: grid;
+}
+
+section {
+    display: block;
+    padding: .8rem 10px;
+    gap: 10px;
+}
+
+h1 {
+    padding: 10px;
+    color: #332f2f;
+}
+
+h2 {
+    text-align: center;
+    background-color: #aca3a3;
+}
+
+/**************** FOOTER *****************/
+footer {
+    display: block;
+    text-align: center;
+}
+
+.social a img {
+    background-color: #e0dada;
+    padding: 10px;
+    width: 22px;
+    border-radius: 10px;
+}
+
+.social a img:hover {
+    background-color: #c9c4c4;
 }
