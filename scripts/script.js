@@ -4,3 +4,5 @@ hamButton.addEventListener('click', () => {
     hamButton.classList.toggle('show');
     navButton.classList.toggle('show');
 })
+
+document.getElementById("lastDateModified").innerHTML = document.lastModified;
