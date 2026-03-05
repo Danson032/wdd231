@@ -96,6 +96,8 @@ h2 {
     background-color: #aca3a3;
 }
 
+
+
 /**************** FOOTER *****************/
 footer {
     display: block;
@@ -111,4 +113,69 @@ footer {
 
 .social a img:hover {
     background-color: #c9c4c4;
+}
+
+
+
+/**************** WEB CERTIFICATE SECTION *****************/
+.web-cert-courses {
+    margin-top: 2rem;
+}
+
+.web-cert-courses h2 {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+/* FILTER BUTTONS */
+
+.course-filters {
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem 0;
+}
+
+.course-filters button {
+    padding: 0.5rem 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #444;
+    background: #ddd;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.course-filters button:hover {
+    background: #bbb;
+}
+
+/* COURSE LIST */
+
+#courses {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.course-card {
+    background: #cfcfcf;
+    border: 1px solid #999;
+    text-align: center;
+    padding: 0.4rem;
+    font-weight: bold;
+}
+
+/* COMPLETED COURSE */
+
+.completed {
+    background: #444;
+    color: white;
+}
+
+/* TOTAL CREDITS */
+
+.credits {
+    text-align: center;
+    margin-top: 1rem;
 }

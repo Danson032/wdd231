@@ -39,7 +39,18 @@
         display: flex;
     }
 
+    @media (min-width: 768px) {
 
+        #courses {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .course-filters {
+            justify-content: space-between;
+            padding: 0 2rem;
+        }
+
+    }
 
 
 
