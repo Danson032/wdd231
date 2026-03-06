@@ -1,11 +1,18 @@
 // HAMBURGER MENU
 const hamBtn = document.getElementById("ham-btn");
 const nav = document.getElementById("nav");
+const hamLabel = document.getElementById("ham-label");
 
 if (hamBtn && nav) {
     hamBtn.addEventListener("click", () => {
         nav.classList.toggle("show");
         hamBtn.classList.toggle("show");
+
+        if (hamBtn.classList.contains("show")) {
+            hamLabel.textContent = "Close";
+        } else {
+            hamLabel.textContent = "Menu";
+        }
     });
 }
 
@@ -15,6 +22,9 @@ const lastDateEl = document.getElementById("lastDateModified");
 if (lastDateEl) {
     lastDateEl.textContent = `Last Modified: ${document.lastModified}`;
 }
+
+//COPYRIGHT
+document.getElementById("copyright").textContent = "©    2026"
 
 // COURSES DATA
 const courses = [
