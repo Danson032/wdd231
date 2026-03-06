@@ -15,7 +15,9 @@
         padding: .7rem 10px;
     }
 
-    .hambuger {
+    .hambuger,
+    #ham-btn,
+    #ham-btn span {
         display: none;
     }
 
