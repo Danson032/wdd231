@@ -1,0 +1,62 @@
+@media only screen and (min-width:600px) {
+
+
+
+
+    body {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    header,
+    main,
+    footer,
+    nav {
+        padding: .7rem 10px;
+    }
+
+    .hambuger,
+    #ham-btn,
+    #ham-btn span {
+        display: none;
+    }
+
+    .navigation {
+        display: block;
+
+    }
+
+    .navigation ul {
+        display: flex;
+        border-bottom: solid 1px #ddd;
+        border-left: solid 1px #ddd;
+    }
+
+    .navigation a {
+        border: none;
+        border-right: solid 1px #ddd;
+    }
+
+    .about-me {
+        display: flex;
+    }
+
+    @media (min-width: 768px) {
+
+        #courses {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .course-filters {
+            justify-content: space-between;
+            padding: 0 2rem;
+        }
+
+    }
+
+
+
+
+
+
+}
