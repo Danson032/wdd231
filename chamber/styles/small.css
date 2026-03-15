@@ -1,0 +1,152 @@
+/* small.css */
+
+body {
+    font-family: Roboto, Arial, sans-serif;
+}
+
+header,
+main,
+nav,
+footer {
+    margin: 0px 10px;
+}
+
+h1 {
+    text-align: center;
+}
+
+header {
+    background-color: aqua;
+    padding: 10px;
+}
+
+/* Navigation */
+
+nav {
+    background-color: aquamarine;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav li {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+nav li:hover {
+    background-color: #E7DD53;
+}
+
+nav a {
+    text-decoration: none;
+    color: #070202;
+}
+
+
+.hamburger {
+    display: none;
+}
+
+.hamburger::before {
+    content: "\2630";
+    font-size: x-large;
+}
+
+.hamburger.show::before {
+    content: "\00d7";
+    font-size: xx-large;
+}
+
+
+main {
+    background-color: rgb(243, 237, 229);
+    padding: 20px;
+}
+
+
+.grid-view {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.grid-view section {
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.list-view section {
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+}
+
+
+.view-toggle button:hover {
+    cursor: pointer;
+    background-color: #b3afaf;
+    border: solid #b3afaf;
+    border-radius: 3px;
+}
+
+
+footer {
+    background-color: #7fffd4;
+    padding: 10px;
+    text-align: center;
+}
+
+footer a {
+    color: #15005B;
+}
+
+
+@media only screen and (max-width:600px) {
+
+    h1 {
+        text-align: left;
+        font-size: large;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: none;
+        background: none;
+    }
+
+    #ham-btn span {
+        font-size: 0.8rem;
+        margin-top: 2px;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    .navigation.show {
+        display: block;
+    }
+
+    .navigation.show ul {
+        flex-direction: column;
+    }
+
+    .navigation li {
+        padding: 12px;
+    }
+
+}

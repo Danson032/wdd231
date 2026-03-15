@@ -1,0 +1,58 @@
+[
+{
+"name": "Safaricom PLC",
+"address": "Safaricom House, Waiyaki Way, Nairobi",
+"phone": "+254 722 000 000",
+"website": "https://www.safaricom.co.ke",
+"image": "safaricom.jpg",
+"membership": 3
+},
+{
+"name": "Kenya Commercial Bank (KCB)",
+"address": "Kencom House, Moi Avenue, Nairobi",
+"phone": "+254 711 087 000",
+"website": "https://ke.kcbgroup.com",
+"image": "kcb.jpg",
+"membership": 3
+},
+{
+"name": "Java House",
+"address": "ABC Place, Waiyaki Way, Nairobi",
+"phone": "+254 709 802 000",
+"website": "https://javahouseafrica.com",
+"image": "javahouse.jpg",
+"membership": 2
+},
+{
+"name": "Naivas Supermarket",
+"address": "Nairobi Business Park, Ngong Road, Nairobi",
+"phone": "+254 709 532 000",
+"website": "https://naivas.online",
+"image": "naivas.jpg",
+"membership": 2
+},
+{
+"name": "Equity Bank Kenya",
+"address": "Equity Centre, Hospital Road, Nairobi",
+"phone": "+254 763 000 000",
+"website": "https://equitygroupholdings.com",
+"image": "equity.jpg",
+"membership": 3
+},
+{
+"name": "Kenya Airways",
+"address": "Airways House, Airport North Road, Nairobi",
+"phone": "+254 711 024 747",
+"website": "https://www.kenya-airways.com",
+"image": "kenyaairways.jpg",
+"membership": 3
+},
+{
+"name": "Carrefour Kenya",
+"address": "Two Rivers Mall, Limuru Road, Nairobi",
+"phone": "+254 709 989 000",
+"website": "https://www.carrefour.ke",
+"image": "carrefour.jpg",
+"membership": 2
+}
+]

@@ -1,0 +1,28 @@
+@media only screen and (min-width: 601px) {
+
+    header {
+        text-align: center;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+
+    .grid-view {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .list-view section {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        align-items: center;
+    }
+
+}

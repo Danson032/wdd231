@@ -51,22 +51,22 @@ getMembers();
 
 
 //menu
+const hamBtn = document.getElementById("ham-btn");
+const nav = document.getElementById("nav");
+const hamLabel = document.getElementById("ham-label");
 
-const menuBtn = document.querySelector("#menuBtn");
-const navMenu = document.querySelector("#navMenu");
+if (hamBtn && nav) {
+    hamBtn.addEventListener("click", () => {
+        nav.classList.toggle("show");
+        hamBtn.classList.toggle("show");
 
-menuBtn.addEventListener("click", () => {
-
-    navMenu.classList.toggle("open");
-
-    if (navMenu.classList.contains("open")) {
-        menuBtn.textContent = "✖";
-    } else {
-        menuBtn.textContent = "☰";
-    }
-
-});
-
+        if (hamBtn.classList.contains("show")) {
+            hamLabel.textContent = "Close";
+        } else {
+            hamLabel.textContent = "Menu";
+        }
+    });
+}
 
 //footer
 document.getElementById("lastModified").textContent =
