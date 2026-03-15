@@ -1,5 +1,3 @@
-/* small.css */
-
 body {
     font-family: Roboto, Arial, sans-serif;
 }
@@ -16,14 +14,13 @@ h1 {
 }
 
 header {
-    background-color: aqua;
+    background-color: #00ffff;
     padding: 10px;
 }
 
-/* Navigation */
 
 nav {
-    background-color: aquamarine;
+    background-color: #7fffd4;
     padding: 10px;
 }
 
@@ -64,7 +61,7 @@ nav a {
 
 
 main {
-    background-color: rgb(243, 237, 229);
+    background-color: #f3ede5;
     padding: 20px;
 }
 
@@ -76,7 +73,7 @@ main {
 }
 
 .grid-view section {
-    background: white;
+    background: #ffffff;
     padding: 15px;
     border-radius: 5px;
     text-align: center;
