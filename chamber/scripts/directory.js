@@ -39,7 +39,7 @@ function displayMembers(members) {
 }
 
 function membershipLevel(level) {
-    switch(level) {
+    switch (level) {
         case 1: return 'Member';
         case 2: return 'Silver';
         case 3: return 'Gold';
@@ -48,3 +48,29 @@ function membershipLevel(level) {
 }
 
 getMembers();
+
+
+//menu
+
+const menuBtn = document.querySelector("#menuBtn");
+const navMenu = document.querySelector("#navMenu");
+
+menuBtn.addEventListener("click", () => {
+
+    navMenu.classList.toggle("open");
+
+    if (navMenu.classList.contains("open")) {
+        menuBtn.textContent = "✖";
+    } else {
+        menuBtn.textContent = "☰";
+    }
+
+});
+
+
+//footer
+document.getElementById("lastModified").textContent =
+    "Last Updated: " + document.lastModified;
+
+document.getElementById("copyright").textContent =
+    "© " + new Date().getFullYear() + " Nairobi Chamber";
