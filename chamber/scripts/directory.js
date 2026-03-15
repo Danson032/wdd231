@@ -21,17 +21,22 @@ async function getMembers() {
 
 function displayMembers(members) {
     membersContainer.innerHTML = '';
+
     members.forEach(member => {
-        const card = document.createElement('div');
+        const card = document.createElement('section');
         card.className = 'member-card';
 
         card.innerHTML = `
-            <img src="images/${member.image}" alt="${member.name} logo">
-            <h3>${member.name}</h3>
-            <p><strong>Address:</strong> ${member.address}</p>
-            <p><strong>Phone:</strong> <a href="tel:${member.phone}">${member.phone}</a></p>
-            <p><strong>Website:</strong> <a href="${member.website}" target="_blank">${member.website}</a></p>
-            <p><strong>Membership:</strong> ${membershipLevel(member.membership)}</p>
+            <div class="member-image">
+                <img src="images/${member.image}" alt="${member.name} logo">
+            </div>
+            <div class="member-info">
+                <h3>${member.name}</h3>
+                <p><strong>Address:</strong> ${member.address}</p>
+                <p><strong>Phone:</strong> <a href="tel:${member.phone}">${member.phone}</a></p>
+                <p><strong>Website:</strong> <a href="${member.website}" target="_blank">${member.website}</a></p>
+                <p><strong>Membership:</strong> ${membershipLevel(member.membership)}</p>
+            </div>
         `;
 
         membersContainer.appendChild(card);
@@ -48,7 +53,6 @@ function membershipLevel(level) {
 }
 
 getMembers();
-
 
 //menu
 const hamBtn = document.getElementById("ham-btn");
