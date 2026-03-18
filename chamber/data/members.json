@@ -8,6 +8,15 @@
 "membership": 3
 },
 {
+    "name": "BYU pathway",
+    "address":"00010",
+    "phone":"123456789",
+    "website":"https://www.byu-i.com",
+    "image":"byu_logo.jpg",
+    "membership":2
+
+},
+{
 "name": "Kenya Commercial Bank (KCB)",
 "address": "Kencom House, Moi Avenue, Nairobi",
 "phone": "+254 711 087 000",
