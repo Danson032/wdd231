@@ -5,27 +5,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Join Nairobi Chamber of Commerce</title>
+  <title>Join Nairobi Chamber of Commerce Membership</title>
 
   <meta name="author" content="Danson Nganga">
   <meta name="description"
-    content="Apply to become a member of the Nairobi Chamber of Commerce. Explore membership benefits and join our business network today.">
-
-  <meta property="og:title" content="Join Nairobi Chamber of Commerce">
-  <meta property="og:description"
-    content="Sign up to become a member of the Nairobi Chamber of Commerce and grow your business network.">
-  <meta property="og:image" content="https://Danson032.github.io/wdd231/chamber/images/chamber.jpg">
-  <meta property="og:url" content="https://Danson032.github.io/wdd231/chamber/join.html">
-
-  <link rel="icon" href="images/favicon.ico">
+    content="Join the Nairobi Chamber of Commerce to connect with local businesses, grow your network, and access exclusive membership opportunities in the community.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
+  <link rel="icon" href="images/favicon.ico">
+
+
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/large.css">
+
   <script src="scripts/join.js" defer></script>
 </head>
 
@@ -33,7 +29,9 @@
 
   <header>
     <h1>Nairobi Chamber of Commerce</h1>
-    <button id="ham-btn" class="hamburger"><span id="ham-label">Menu</span></button>
+    <button id="ham-btn" class="hamburger">
+      <span id="ham-label">Menu</span>
+    </button>
   </header>
 
   <nav id="nav" class="navigation">
@@ -42,6 +40,7 @@
       <li><a href="discover.html">Discover</a></li>
       <li><a href="directory.html">Directory</a></li>
       <li class="current"><a href="join.html">Join</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 
@@ -50,28 +49,29 @@
     <form method="get" action="thankyou.html">
 
       <label for="fname">First Name</label>
-      <input id="fname" type="text" name="fname" required autocomplete="given-name">
+      <input id="fname" type="text" name="fname" required autocomplete="given-name" title="Enter your first name">
 
       <label for="lname">Last Name</label>
-      <input id="lname" type="text" name="lname" required autocomplete="family-name">
+      <input id="lname" type="text" name="lname" required autocomplete="family-name" title="Enter your last name">
 
       <label for="orgtitle">Organization Title</label>
       <input id="orgtitle" type="text" name="orgtitle" autocomplete="organization-title" pattern="[A-Za-z\-\s]{7,}"
-        title="Minimum 7 characters">
+        title="Minimum 7 characters using letters, spaces, or hyphens">
 
-      <label for="email">Email</label>
-      <input id="email" type="email" name="email" required autocomplete="email" placeholder="example@email.com">
+      <label for="email">Email Address</label>
+      <input id="email" type="email" name="email" required autocomplete="email" placeholder="example@email.com"
+        title="Enter your email address">
 
       <label for="phone">Mobile Phone</label>
-      <input id="phone" type="tel" name="phone" required autocomplete="tel">
+      <input id="phone" type="tel" name="phone" required autocomplete="tel" title="Enter your mobile phone number">
 
       <label for="business">Business Name</label>
-      <input id="business" type="text" name="business" required autocomplete="organization">
+      <input id="business" type="text" name="business" required autocomplete="organization"
+        title="Enter your business name">
 
       <label for="membership">Membership Level</label>
-      <label for="membership">Membership Level</label>
-      <select id="membership" name="membership" required>
-        <option value="" disabled selected>Select a membership level</option>
+      <select id="membership" name="membership" required title="Select a membership level">
+        <option value="" disabled selected>Select membership level</option>
         <option value="np">NP Membership</option>
         <option value="bronze">Bronze Membership</option>
         <option value="silver">Silver Membership</option>
@@ -79,7 +79,7 @@
       </select>
 
       <label for="description">Business Description</label>
-      <textarea id="description" name="description"></textarea>
+      <textarea id="description" name="description" title="Describe your business"></textarea>
 
       <input type="hidden" id="timestamp" name="timestamp">
 
@@ -88,45 +88,65 @@
     </form>
 
     <section class="cards">
+      <h2>Membership Levels</h2>
+
       <div class="card">
-        <h2>NP Membership</h2>
-        <button type="button" onclick="openModal('npModal')">View Benefits</button>
+        <h3>NP Membership</h3>
+        <button type="button" data-modal="npModal">View Benefits</button>
       </div>
 
       <div class="card">
-        <h2>Bronze Membership</h2>
-        <button type="button" onclick="openModal('bronzeModal')">View Benefits</button>
+        <h3>Bronze Membership</h3>
+        <button type="button" data-modal="bronzeModal">View Benefits</button>
       </div>
 
       <div class="card">
-        <h2>Silver Membership</h2>
-        <button type="button" onclick="openModal('silverModal')">View Benefits</button>
+        <h3>Silver Membership</h3>
+        <button type="button" data-modal="silverModal">View Benefits</button>
       </div>
 
       <div class="card">
-        <h2>Gold Membership</h2>
-        <button type="button" onclick="openModal('goldModal')">View Benefits</button>
+        <h3>Gold Membership</h3>
+        <button type="button" data-modal="goldModal">View Benefits</button>
       </div>
     </section>
 
   </main>
 
   <dialog id="npModal">
-    <p>Free for nonprofits. Basic listing.</p><button onclick="closeModal('npModal')">Close</button>
+    <p>Free membership for nonprofit organizations with basic directory listing.</p>
+    <button type="button" onclick="this.parentElement.close()">Close</button>
   </dialog>
   <dialog id="bronzeModal">
-    <p>Includes events.</p><button onclick="closeModal('bronzeModal')">Close</button>
+    <p>Affordable membership with directory listing and event access.</p>
+    <button type="button" onclick="this.parentElement.close()">Close</button>
   </dialog>
   <dialog id="silverModal">
-    <p>Includes training + ads.</p><button onclick="closeModal('silverModal')">Close</button>
+    <p>Includes training sessions, networking events, and advertising opportunities.</p>
+    <button type="button" onclick="this.parentElement.close()">Close</button>
   </dialog>
   <dialog id="goldModal">
-    <p>All premium benefits.</p><button onclick="closeModal('goldModal')">Close</button>
+    <p>Premium membership with homepage spotlight, advertising, and full chamber benefits.</p>
+    <button type="button" onclick="this.parentElement.close()">Close</button>
   </dialog>
 
   <footer>
-    <p id="lastModified"></p>
-    <p id="copyright"></p>
+
+    <div class="container footer-container">
+
+      <p>
+        Contact:
+        <a href="mailto:dansonnganga019@gmail.com">dansonnganga019@gmail.com</a> |
+        <a href="tel:+254114547608">+254114547608</a>
+      </p>
+
+      <p>Danson Nganga | WDD 231</p>
+
+      <p id="lastModified"></p>
+      <p id="copyright"></p>
+
+    </div>
+
   </footer>
 
 </body>

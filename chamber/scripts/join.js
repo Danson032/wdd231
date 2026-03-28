@@ -26,14 +26,21 @@ document.getElementById("copyright").textContent =
 // timestamp
 const timestampField = document.getElementById("timestamp");
 if (timestampField) {
-  timestampField.value = new Date().toISOString();
+    timestampField.value = new Date().toISOString();
 }
 
 // modals
 function openModal(id) {
-  document.getElementById(id).showModal();
+    document.getElementById(id).showModal();
 }
 
 function closeModal(id) {
-  document.getElementById(id).close();
+    document.getElementById(id).close();
 }
+
+document.querySelectorAll("[data-modal]").forEach(btn => {
+    btn.addEventListener("click", () => {
+        const id = btn.dataset.modal;
+        document.getElementById(id).showModal();
+    });
+});
