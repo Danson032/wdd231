@@ -10,7 +10,11 @@
   <meta name="author" content="Danson Nganga">
   <meta name="description"
     content="Join the Nairobi Chamber of Commerce to connect with local businesses, grow your network, and access exclusive membership opportunities in the community.">
-
+  <meta property="og:title" content="Join Nairobi Chamber of Commerce Membership">
+  <meta property="og:image" content="https://Danson032.github.io/wdd231/chamber/images/chamber.jpg">
+  <meta property="og:url" content="https://Danson032.github.io/wdd231/chamber/join.html">
+  <meta property="og:description"
+    content="Join the Nairobi Chamber of Commerce to grow your business, connect with professionals, and access exclusive networking opportunities.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -112,22 +116,24 @@
     </section>
 
   </main>
-
   <dialog id="npModal">
     <p>Free membership for nonprofit organizations with basic directory listing.</p>
-    <button type="button" onclick="this.parentElement.close()">Close</button>
+    <button type="button" data-close="npModal">Close</button>
   </dialog>
+
   <dialog id="bronzeModal">
     <p>Affordable membership with directory listing and event access.</p>
-    <button type="button" onclick="this.parentElement.close()">Close</button>
+    <button type="button" data-close="bronzeModal">Close</button>
   </dialog>
+
   <dialog id="silverModal">
     <p>Includes training sessions, networking events, and advertising opportunities.</p>
-    <button type="button" onclick="this.parentElement.close()">Close</button>
+    <button type="button" data-close="silverModal">Close</button>
   </dialog>
+
   <dialog id="goldModal">
     <p>Premium membership with homepage spotlight, advertising, and full chamber benefits.</p>
-    <button type="button" onclick="this.parentElement.close()">Close</button>
+    <button type="button" data-close="goldModal">Close</button>
   </dialog>
 
   <footer>

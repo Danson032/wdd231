@@ -29,18 +29,19 @@ if (timestampField) {
     timestampField.value = new Date().toISOString();
 }
 
-// modals
-function openModal(id) {
-    document.getElementById(id).showModal();
-}
+// modals//
 
-function closeModal(id) {
-    document.getElementById(id).close();
-}
-
+// OPEN MODALS
 document.querySelectorAll("[data-modal]").forEach(btn => {
     btn.addEventListener("click", () => {
-        const id = btn.dataset.modal;
-        document.getElementById(id).showModal();
+        document.getElementById(btn.dataset.modal).showModal();
     });
 });
+
+// CLOSE MODALS
+document.querySelectorAll("[data-close]").forEach(btn => {
+    btn.addEventListener("click", () => {
+        document.getElementById(btn.dataset.close).close();
+    });
+});
+
