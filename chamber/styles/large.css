@@ -24,5 +24,11 @@
         gap: 10px;
         align-items: center;
     }
-    
+
+    .join-layout {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 2rem;
+    }
+
 }
