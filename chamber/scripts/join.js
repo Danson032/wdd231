@@ -45,3 +45,28 @@ document.querySelectorAll("[data-close]").forEach(btn => {
     });
 });
 
+// THANK YOU PAGE DATA DISPLAY
+const params = new URLSearchParams(window.location.search);
+
+// Only run if we are on thankyou page
+if (document.getElementById("fname")) {
+
+    const setText = (id, value) => {
+        const el = document.getElementById(id);
+        if (el && value) {
+            el.textContent = value;
+        }
+    };
+
+    setText("fname", params.get("fname"));
+    setText("lname", params.get("lname"));
+    setText("email", params.get("email"));
+    setText("phone", params.get("phone"));
+    setText("business", params.get("business"));
+
+    const rawDate = params.get("timestamp");
+    if (rawDate) {
+        const date = new Date(rawDate);
+        setText("timestampDisplay", date.toLocaleString());
+    }
+}
