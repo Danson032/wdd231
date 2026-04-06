@@ -8,27 +8,45 @@
 
     <title>Nairobi Chamber of Commerce | Discover</title>
 
-    <meta name="description"
-        content="Discover Nairobi's key attractions, demographics, and opportunities for business and visitors.">
     <meta name="author" content="Danson Nganga">
+    <meta name="description"
+        content="Discover Nairobi's key attractions, demographics, and opportunities for business and visitors in the Nairobi Chamber of Commerce region.">
 
-    <link rel="stylesheet" href="styles/base.css">
+    <meta property="og:title" content="Nairobi Chamber of Commerce | Discover">
+    <meta property="og:description"
+        content="Explore key attractions, business hubs, and cultural landmarks in Nairobi.">
+    <meta property="og:image"
+        content="https://Danson032.github.io/wdd231/chamber/images/chamber.jpg">
+    <meta property="og:url"
+        content="https://Danson032.github.io/wdd231/chamber/discover.html">
+
+    <link rel="icon" href="images/favicon.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+
     <script type="module" src="scripts/discover.js" defer></script>
-
-
 </head>
 
 <body>
 
     <header>
-        <h1>Nairobi Chamber of Commerce</h1>
+        <h1>Nairobi Chamber Directory</h1>
+        <button id="ham-btn" class="hamburger">
+            <span id="ham-label">Menu</span>
+        </button>
     </header>
 
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="directory.html">Directory</a></li>
-            <li><a href="discover.html" class="active">Discover</a></li>
+            <li class="current"><a href="discover.html" class="active">Discover</a></li>
             <li><a href="join.html">Join</a></li>
         </ul>
     </nav>
