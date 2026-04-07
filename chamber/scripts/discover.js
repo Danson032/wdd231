@@ -20,7 +20,6 @@ document.getElementById("lastModified").textContent =
 document.getElementById("copyright").textContent =
     "© " + new Date().getFullYear() + " Nairobi Chamber";
 
-// 📌 FETCH JSON + BUILD CARDS
 const container = document.getElementById("cards-container");
 
 async function loadPlaces() {
