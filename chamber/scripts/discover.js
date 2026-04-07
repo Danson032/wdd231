@@ -1,50 +1,53 @@
-//menu btn//
+// Menu button
 const hamBtn = document.getElementById("ham-btn");
 const nav = document.getElementById("nav");
 const hamLabel = document.getElementById("ham-label");
 
-if (hamBtn && nav) {
+if (hamBtn && nav && hamLabel) {
     hamBtn.addEventListener("click", () => {
         nav.classList.toggle("show");
         hamBtn.classList.toggle("show");
 
-        if (hamBtn.classList.contains("show")) {
-            hamLabel.textContent = "Close";
-        } else {
-            hamLabel.textContent = "Menu";
-        }
+        hamLabel.textContent =
+            hamBtn.classList.contains("show") ? "Close" : "Menu";
     });
 }
 
-//footer
+// Footer
 document.getElementById("lastModified").textContent =
     "Last Updated: " + document.lastModified;
 
 document.getElementById("copyright").textContent =
     "© " + new Date().getFullYear() + " Nairobi Chamber";
 
+// 📌 FETCH JSON + BUILD CARDS
 const container = document.getElementById("cards-container");
 
-places.forEach((place) => {
-    const card = document.createElement("article");
-    card.classList.add("card");
+async function loadPlaces() {
+    const response = await fetch("./data/places.json");
+    const places = await response.json();
 
-    card.innerHTML = `
-        <h2>${place.name}</h2>
-        <figure>
-            <img src="${place.image}" alt="Image of ${place.name}" loading="lazy">
-        </figure>
-        <address>${place.address}</address>
-        <p>${place.description}</p>
-        <button>Learn More</button>
-    `;
+    places.forEach((place) => {
+        const card = document.createElement("article");
+        card.classList.add("card");
 
-    container.appendChild(card);
-});
+        card.innerHTML = `
+            <h2>${place.name}</h2>
+            <figure>
+                <img src="${place.image}" alt="Image of ${place.name}" loading="lazy">
+            </figure>
+            <address>${place.address}</address>
+            <p>${place.description}</p>
+            <button>Learn More</button>
+        `;
 
+        container.appendChild(card);
+    });
+}
 
-import { places } from "../data/place.mjs";
-/* Visit Message */
+loadPlaces();
+
+// Visit Message
 const messageBox = document.getElementById("visit-message");
 
 const lastVisit = localStorage.getItem("lastVisit");
