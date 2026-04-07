@@ -42,6 +42,8 @@ places.forEach((place) => {
     container.appendChild(card);
 });
 
+
+import { places } from "../data/place.mjs";
 /* Visit Message */
 const messageBox = document.getElementById("visit-message");
 
