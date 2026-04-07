@@ -1,0 +1,109 @@
+body {
+    font-family: Roboto, Arial, sans-serif;
+}
+
+header,
+main,
+nav,
+footer {
+    margin: 0 10px;
+}
+
+header {
+    background-color: #00ffff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    font-size: large;
+}
+
+nav {
+    background-color: #7fffd4;
+    padding: 10px;
+}
+
+.navigation {
+    display: none;
+}
+
+.navigation.show {
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+nav li {
+    padding: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+.current {
+    background-color: #5fd8b0;
+}
+
+.hamburger {
+    border: none;
+    background: none;
+}
+
+.hamburger::before {
+    content: "\2630";
+    font-size: x-large;
+}
+
+.hamburger.show::before {
+    content: "\00d7";
+    font-size: xx-large;
+}
+
+main {
+    background-color: #f3ede5;
+    padding: 20px;
+}
+
+/* Cards */
+.grid-view {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.card {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+/*=======Animation=========*/
+.cards {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+footer {
+    background-color: #7fffd4;
+    padding: 10px;
+    text-align: center;
+}
