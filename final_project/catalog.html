@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GameVault - Catalog</title>
+    <meta name="description" content="Browse a catalog of video games.">
+    <meta name="author" content="Your Name">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Game Catalog</h1>
+        <nav>
+            <button id="menuBtn">☰</button>
+            <ul id="navList">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="catalog.html">Catalog</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>All Games</h2>
+
+        <section id="controls">
+            <input type="text" id="search" placeholder="Search games...">
+        </section>
+
+        <section id="gamesContainer"></section>
+
+        <div id="modal" class="modal" aria-hidden="true"></div>
+    </main>
+
+    <footer>
+        <p>© 2026 GameVault</p>
+    </footer>
+
+    <script type="module" src="js/games.js"></script>
+</body>
+
+</html>
