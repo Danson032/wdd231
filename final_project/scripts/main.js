@@ -1,13 +1,25 @@
+import { loadFeatured } from "./featured.js";
+
+// MENU TOGGLE
 const menuBtn = document.querySelector("#menuBtn");
 const navList = document.querySelector("#navList");
 
-menuBtn.addEventListener("click", () => {
-    navList.classList.toggle("open");
-});
+if (menuBtn && navList) {
+    menuBtn.addEventListener("click", () => {
+        navList.classList.toggle("open");
+    });
+}
 
-// footer
-document.querySelector("#copyright").textContent =
-    `© ${new Date().getFullYear()} GameVault`;
+// LOAD FEATURED GAMES (homepage only)
+loadFeatured();
 
-document.querySelector("#lastModified").textContent =
-    `Last Modified: ${document.lastModified}`;
+// FOOTER
+const copyright = document.querySelector("#copyright");
+if (copyright) {
+    copyright.textContent = `© ${new Date().getFullYear()} GameVault`;
+}
+
+const lastModified = document.querySelector("#lastModified");
+if (lastModified) {
+    lastModified.textContent = `Last Modified: ${document.lastModified}`;
+}

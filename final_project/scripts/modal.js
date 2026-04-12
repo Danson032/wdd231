@@ -1,6 +1,8 @@
 export function openModal(game) {
     const modal = document.querySelector("#modal");
 
+    if (!modal) return;
+
     modal.innerHTML = `
         <div class="modal-content">
             <h2>${game.title}</h2>
@@ -21,6 +23,7 @@ export function openModal(game) {
     modal.onclick = (e) => {
         if (e.target === modal) {
             modal.classList.remove("open");
+            modal.setAttribute("aria-hidden", "true");
         }
     };
 }
