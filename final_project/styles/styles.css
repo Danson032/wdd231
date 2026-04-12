@@ -6,25 +6,41 @@ body {
 
 /* HEADER */
 header {
-    background: #222;
-    color: white;
+    background: aqua;
+    color: #222;
     padding: 1rem;
+    text-align: center;
 }
 
 /* NAV */
 nav ul {
     list-style: none;
-    display: flex;
+    display: none;
+    flex-direction: column;
     gap: 1rem;
+    padding: 0;
+}
+
+nav ul.open {
+    display: flex;
 }
 
 nav a {
-    color: white;
+    color: #222;
     text-decoration: none;
 }
 
 .active {
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid #222;
+}
+
+/* MENU BUTTON */
+#menuBtn {
+    display: block;
+    background: none;
+    border: none;
+    color: #222;
+    font-size: 1.5rem;
 }
 
 /* HERO */
@@ -38,7 +54,7 @@ nav a {
 #gamesContainer,
 #featured {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: 1fr;
     gap: 1rem;
     padding: 1rem;
 }
@@ -74,25 +90,17 @@ nav a {
     padding: 2rem;
     border-radius: 8px;
 }
-#menuBtn {
-    display: none;
+
+/* FOOTER */
+footer {
+    background: aqua;
+    text-align: center;
+    padding: 1rem;
 }
 
-@media (max-width: 600px) {
-    nav ul {
-        display: none;
-        flex-direction: column;
-    }
-
-    nav ul.open {
-        display: flex;
-    }
-
-    #menuBtn {
-        display: block;
-        background: none;
-        border: none;
-        color: white;
-        font-size: 1.5rem;
-    }
+footer .social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
 }
