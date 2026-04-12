@@ -5,20 +5,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>GameVault - Home</title>
-    <meta name="description" content="A video game library showcasing popular games.">
-    <meta name="author" content="Your Name">
+    <title>GameVault - Discover Popular Video Games Library</title>
 
-    <link rel="stylesheet" href="css/styles.css">
+    <meta name="description"
+        content="Explore GameVault, a modern video game library showcasing top games across platforms. Save favorites and discover new titles.">
+
+    <meta name="author" content="Danson Nganga">
+
+    <link rel="icon" href="images/favicon.ico">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="GameVault Video Game Library and Catalog">
+    <meta property="og:description"
+        content="Browse and discover top video games with GameVault. Save favorites and explore detailed game info.">
+    <meta property="og:image" content="https://yourdomain.com/images/preview.jpg">
+    <meta property="og:url" content="https://yourdomain.com/index.html">
+
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 
 <body>
+
     <header>
         <h1>GameVault</h1>
-        <nav>
-            <button id="menuBtn">☰</button>
+
+        <nav aria-label="Main navigation">
+            <button id="menuBtn" aria-label="Open navigation menu">☰</button>
             <ul id="navList">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="catalog.html">Catalog</a></li>
                 <li><a href="about.html">About</a></li>
             </ul>
@@ -37,22 +51,29 @@
         </section>
     </main>
 
-    <footer class="footer">
+    <footer>
         <div class="social">
-            <a href="https://www.facebook.com/Dandyke01" target="_blank"><img src="images/facebook.svg"
-                    alt="facebook icon"></a>
-            <a href="https://github.com/Danson032/wdd231.git" target="_blank"><img src="images/github.svg"
-                    alt="github icon"></a>
-            <a href="https://www.instagram.com/dandyke_?igsh=Yzl4aW4yajd1eHpm" target="_blank"><img
-                    src="images/instagram.svg" alt="instagram icon"></a>
-            <a href="https://www.linkedin.com/in/danson-nganga-08615b340/" target="_blank"><img
-                    src="images/linkedin.svg" alt="linkedin icon"></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                <img src="images/facebook.svg" alt="Facebook icon">
+            </a>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                <img src="images/github.svg" alt="GitHub icon">
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                <img src="images/instagram.svg" alt="Instagram icon">
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <img src="images/linkedin.svg" alt="LinkedIn icon">
+            </a>
         </div>
+
         <p id="copyright"></p>
-        <p id="lastDateModified"></p>
+        <p id="lastModified"></p>
     </footer>
 
-    <script type="module" src="js/main.js"></script>
+    <script type="module" src="scripts/main.js"></script>
+    <script type="module" src="scripts/featured.js"></script>
+
 </body>
 
 </html>

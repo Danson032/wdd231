@@ -1,15 +1,13 @@
-async function loadFeatured() {
-  const res = await fetch("data/games.json");
-  const games = await res.json();
+const menuBtn = document.querySelector("#menuBtn");
+const navList = document.querySelector("#navList");
 
-  const featured = games.slice(0, 4);
+menuBtn.addEventListener("click", () => {
+    navList.classList.toggle("open");
+});
 
-  document.querySelector("#featured").innerHTML = featured.map(g => `
-    <div class="card">
-      <h3>${g.title}</h3>
-      <p>${g.genre}</p>
-    </div>
-  `).join("");
-}
+// footer
+document.querySelector("#copyright").textContent =
+    `© ${new Date().getFullYear()} GameVault`;
 
-loadFeatured();
+document.querySelector("#lastModified").textContent =
+    `Last Modified: ${document.lastModified}`;

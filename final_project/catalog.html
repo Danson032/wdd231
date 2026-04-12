@@ -1,47 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>GameVault - Catalog</title>
-    <meta name="description" content="Browse a catalog of video games.">
-    <meta name="author" content="Your Name">
+<title>GameVault - Game Catalog</title>
 
-    <link rel="stylesheet" href="css/styles.css">
+<meta name="description" content="Browse the complete GameVault catalog of popular video games. Search, explore, and view detailed game information.">
+
+<meta name="author" content="Danson Nganga">
+
+<link rel="icon" href="images/favicon.ico">
+
+<!-- Open Graph -->
+<meta property="og:title" content="GameVault Game Catalog Collection">
+<meta property="og:description" content="Explore a full catalog of top video games with descriptions, genres, and release years.">
+<meta property="og:image" content="https://yourdomain.com/images/preview.jpg">
+<meta property="og:url" content="https://yourdomain.com/catalog.html">
+
+<link rel="stylesheet" href="styles/styles.css">
 </head>
 
 <body>
-    <header>
-        <h1>Game Catalog</h1>
-        <nav>
-            <button id="menuBtn">☰</button>
-            <ul id="navList">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="catalog.html">Catalog</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <h2>All Games</h2>
+<header>
+    <h1>Game Catalog</h1>
 
-        <section id="controls">
-            <input type="text" id="search" placeholder="Search games...">
-        </section>
+    <nav aria-label="Main navigation">
+        <button id="menuBtn" aria-label="Open navigation menu">☰</button>
+        <ul id="navList">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="catalog.html" class="active">Catalog</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+</header>
 
-        <section id="gamesContainer"></section>
+<main>
+    <h2>All Games</h2>
 
-        <div id="modal" class="modal" aria-hidden="true"></div>
-    </main>
+    <section id="controls">
+        <input type="text" id="search" placeholder="Search games..." aria-label="Search games">
+    </section>
 
-    <footer>
-        <p>© 2026 GameVault</p>
-    </footer>
+    <section id="gamesContainer"></section>
 
-    <script type="module" src="js/games.js"></script>
+    <div id="modal" class="modal" role="dialog" aria-hidden="true"></div>
+</main>
+
+<footer>
+    <div class="social">
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+            <img src="images/facebook.svg" alt="Facebook icon">
+        </a>
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+            <img src="images/github.svg" alt="GitHub icon">
+        </a>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+            <img src="images/instagram.svg" alt="Instagram icon">
+        </a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+            <img src="images/linkedin.svg" alt="LinkedIn icon">
+        </a>
+    </div>
+
+    <p id="copyright"></p>
+    <p id="lastModified"></p>
+</footer>
+
+<script type="module" src="scripts/main.js"></script>
+<script type="module" src="scripts/games.js"></script>
+
 </body>
-
 </html>

@@ -1,18 +1,31 @@
-export function openModal(game) {
-  const modal = document.querySelector("#modal");
+import { openModal } from "./modal.js";
 
-  modal.innerHTML = `
-    <div class="modal-content">
-      <h2>${game.title}</h2>
-      <p>${game.description}</p>
-      <p>${game.year} | ${game.genre}</p>
-      <button id="closeModal">Close</button>
-    </div>
-  `;
+async function loadGames() {
+    try {
+        const res = await fetch("data/games.json");
+        const games = await res.json();
 
-  modal.classList.add("open");
+        const container = document.querySelector("#gamesContainer");
 
-  document.querySelector("#closeModal").onclick = () => {
-    modal.classList.remove("open");
-  };
+        container.innerHTML = games.map(game => `
+            <div class="card">
+                <img src="${game.image}" alt="${game.title}">
+                <h3>${game.title}</h3>
+                <p>${game.genre}</p>
+                <button data-id="${game.id}">Details</button>
+            </div>
+        `).join("");
+
+        document.querySelectorAll("button").forEach(btn => {
+            btn.addEventListener("click", () => {
+                const game = games.find(g => g.id == btn.dataset.id);
+                openModal(game);
+            });
+        });
+
+    } catch (error) {
+        console.error("Error loading games:", error);
+    }
 }
+
+loadGames();
