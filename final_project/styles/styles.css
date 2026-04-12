@@ -6,7 +6,7 @@ body {
 
 /* HEADER */
 header {
-    background: aqua;
+    background: #00ffff;
     color: #222;
     padding: 1rem;
     text-align: center;
@@ -64,7 +64,7 @@ nav a {
     border: 1px solid #bbb;
     padding: 1rem;
     border-radius: 8px;
-    background: white;
+    background: #ffffff;
 }
 
 .card img {
@@ -86,14 +86,14 @@ nav a {
 }
 
 .modal-content {
-    background: white;
+    background: #ffffff;
     padding: 2rem;
     border-radius: 8px;
 }
 
 /* FOOTER */
 footer {
-    background: aqua;
+    background: #00ffff;
     text-align: center;
     padding: 1rem;
 }
